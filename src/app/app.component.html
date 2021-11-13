@@ -7,7 +7,7 @@
       <form [formGroup]="options">
         <mat-form-field appearance="outline">
           <mat-label>Ingrese un número</mat-label>
-          <input matInput type="number"  [formControl]="numberValidation" min="1" value="n">
+          <input matInput type="number"  [formControl]="numberValidation" min="1" #n>
           <mat-error *ngIf="numberValidation.invalid">Min: 1</mat-error>
         </mat-form-field>
 
@@ -16,13 +16,13 @@
     </mat-card-content>
 
     <mat-card-actions>
-      <button mat-button class="btn">Aceptar</button>
+      <button mat-button class="btn" (click)="ProcessAceptButton(n.value)">Aceptar</button>
     </mat-card-actions>
 
 
     <mat-card-footer class="cardFooter"fxLayout="column" fxLayoutAlign="space-evenly center">
       <mat-divider class="divider"></mat-divider>
-      <h3>El N-ésimo número de x es x</h3>
+      <h3>El N-ésimo número de  x   es x</h3>
     </mat-card-footer>
   </mat-card>
 </div>
