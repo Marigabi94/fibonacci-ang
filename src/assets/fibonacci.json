@@ -1,5 +1,14 @@
 {
-  "numero":"",
-  "serie":"",
-  "nesimoTermino":""
+  "fibonacci":[
+  {
+    "id":1,
+    "serie":"0",
+    "nesimoTermino":"0"
+  },
+  {
+    "id":2,
+    "serie":"0,1",
+    "nesimoTermino":"1"
+  }
+]
 }

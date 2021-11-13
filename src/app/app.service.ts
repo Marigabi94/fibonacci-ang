@@ -5,26 +5,30 @@ import { catchError, retry } from 'rxjs/operators';
 
 
 export interface Fibonacci {
-  numero: string;
+  id: number;
   serie: string;
   nesimoTermino: string;
 }
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    Authorization: 'my-auth-token'
-  })
-};
+
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AppService {
-  configUrl = 'assets/fibonacci.json';
+  configUrl = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
+
+  httpHeader = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+
+
+
   handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       console.error('An error occurred:', error.error);
@@ -37,18 +41,19 @@ export class AppService {
   }
 
 
-  getFibonacci() {
-    return this.http.get<Fibonacci>(this.configUrl);
+  getFibonacci(valor:number) {
+    return this.http.get<Fibonacci>(this.configUrl +'fibonacci/'+ valor);
   }
 
-  putFibonacci(valor: any, arreglo: any, enesimoT: any): Observable<Fibonacci>{
-    return this.http.put<Fibonacci>(this.configUrl, [valor, arreglo, enesimoT], httpOptions)
-      .pipe(
-        catchError(this.handleError)
-        );
+
+  postFibonacci(fibonacci:any): Observable<Fibonacci> {
+    return this.http.post<Fibonacci>(this.configUrl + 'fibonacci/',JSON.stringify(fibonacci), this.httpHeader)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
 
   }
-
 
 
 

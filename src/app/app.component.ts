@@ -23,7 +23,7 @@ export class AppComponent {
   ProcessAceptButton(n:any){
     var valor = n;
 
-    console.log(valor);
+    // console.log(valor);
 
     this.calculateFibonacci(parseInt(valor));
 
@@ -46,32 +46,31 @@ export class AppComponent {
         }
       }
       let nesimoT = arreglo[arreglo.length-1];
+      var fibo = [valor,arreglo,nesimoT];
       // nesimoT  nesimo termino
       //valor es el numero ingresado
       //arreglo es la serie
-      console.log(nesimoT);
-      console.log(valor);
-      console.log(arreglo);
-      this.putFibonacci(valor, arreglo, nesimoT);
+      // console.log(nesimoT);
+      // console.log(valor);
+      // console.log(arreglo);
+      // this.postFibonacci(fibo);
+     this.getFibonacci(valor);
   }
 
-  getFibonacci(){
-    this.appService.getFibonacci()
+  getFibonacci(valor:number){
+    this.appService.getFibonacci(valor)
     .subscribe((data: Fibonacci)  =>  this.fibonacci = {
-        numero: data.numero,
+        id: data.id,
         serie:  data.serie,
         nesimoTermino: data.nesimoTermino,
     });
+    console.log (this.fibonacci);
   }
 
-  putFibonacci(valor: any, arreglo: any, nesimoT: any){
-    this.appService.putFibonacci(valor,arreglo, nesimoT)
-    .subscribe((data: Fibonacci)  =>  this.fibonacci = {
-        numero: data.numero,
-        serie:  data.serie,
-        nesimoTermino: data.nesimoTermino,
-    });
-  }
+  // postFibonacci(fibo: any){
+  //   this.appService.postFibonacci(fibo)
+  //   .subscribe(fibonacci => this.fibonacci.push(fibo));
+  // }
 
 
 }
