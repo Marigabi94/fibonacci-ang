@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-
 export interface Fibonacci {
   id: number;
   serie: string;
@@ -17,7 +16,7 @@ export interface Fibonacci {
 })
 
 export class AppService {
-  configUrl = 'http://localhost:3000/';
+  configUrl = 'http://localhost:3000/fibonacci/';
 
   constructor(private http: HttpClient) { }
 
@@ -41,20 +40,23 @@ export class AppService {
   }
 
 
-  getFibonacci(valor:number) {
-    return this.http.get<Fibonacci>(this.configUrl +'fibonacci/'+ valor);
-  }
-
-
-  postFibonacci(fibonacci:any): Observable<Fibonacci> {
-    return this.http.post<Fibonacci>(this.configUrl + 'fibonacci/',JSON.stringify(fibonacci), this.httpHeader)
+  getFibonacci(id: number): Observable<Fibonacci> {
+    return this.http.get<Fibonacci>(this.configUrl + id)
     .pipe(
       retry(1),
       catchError(this.handleError)
     )
-
   }
 
+
+
+  postFibonacci(fibonacci: any): Observable<Fibonacci> {
+    return this.http.post<Fibonacci>(this.configUrl , JSON.stringify(fibonacci), this.httpHeader)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
 
 
 }

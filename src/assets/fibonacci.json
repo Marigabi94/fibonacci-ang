@@ -1,14 +1,32 @@
 {
-  "fibonacci":[
-  {
-    "id":1,
-    "serie":"0",
-    "nesimoTermino":"0"
-  },
-  {
-    "id":2,
-    "serie":"0,1",
-    "nesimoTermino":"1"
-  }
-]
+  "fibonacci": [
+    {
+      "id": 4,
+      "serie": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "nesimoTermino": 2
+    },
+    {
+      "id": "1",
+      "serie": [
+        0
+      ],
+      "nesimoTermino": 0
+    },
+    {
+      "id": "5",
+      "serie": [
+        0,
+        1,
+        1,
+        2,
+        3
+      ],
+      "nesimoTermino": 3
+    }
+  ]
 }
