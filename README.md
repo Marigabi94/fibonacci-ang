@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   ### Instalar:
      npm install json-server
   ### Ingresar por cmd a la carpeta "assets" y ejecutar
-     json-server --watch database.json 
+     json-server --watch fibonacci.json 
 
 
 ## Development server
