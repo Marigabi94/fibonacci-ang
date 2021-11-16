@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatChipsModule,
     MatSortModule,
     MatSelectModule,
+    MatDividerModule,
   ],
   exports: [
     MatButtonModule,
@@ -43,6 +45,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatChipsModule,
     MatSortModule,
     MatSelectModule,
+    MatDividerModule,
   ],
 })
 export class MaterialModule {}

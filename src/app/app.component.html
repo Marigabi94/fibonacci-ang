@@ -1,0 +1,28 @@
+<div class="container"  fxFill fxLayout="column" fxLayoutAlign="center center" >
+  <mat-card class="card" fxLayout="column" fxLayoutAlign="center center"  >
+    <mat-card-header>
+      <mat-card-title>N-ésimo Término de Fibonacci</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="matContent"  fxLayout="column" fxLayoutAlign="center center"  onsubmit="return false">
+      <form [formGroup]="options" onsubmit="return false">
+        <mat-form-field appearance="outline" onsubmit="return false">
+          <mat-label>Ingrese un número</mat-label>
+          <input matInput type="number"  [formControl]="numberValidation" min="1" #n value="onsubmit" onsubmit="return false">
+          <mat-error *ngIf="numberValidation.invalid">Min: 1</mat-error>
+        </mat-form-field>
+
+      </form>
+
+    </mat-card-content>
+
+    <mat-card-actions onsubmit="return false">
+      <button mat-button class="btn" type="button" (click)="ProcessAceptButton(n.value)">Aceptar</button>
+    </mat-card-actions>
+
+
+    <mat-card-footer class="cardFooter"fxLayout="column" fxLayoutAlign="space-evenly center">
+      <mat-divider class="divider"></mat-divider>
+      <h3>El N-ésimo termino número {{fiboData.id}} es: {{fiboData.nesimoTermino}} </h3>
+    </mat-card-footer>
+  </mat-card>
+</div>
