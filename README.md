@@ -1,6 +1,18 @@
 # FibonacciAng
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+
+
+## Recordar instalar el node_modules desde el cmd luego de haber ingresando a la carpeta del proyecto
+    npm install
+
+
+## Para configurar el servidor del json seguir los siguientes pasos: 
+  
+  ### Instalar:
+     npm install json-server
+  ### Ingresar por cmd a la carpeta "assets" y ejecutar
+     json-server --watch database.json 
+
 
 ## Development server
 
