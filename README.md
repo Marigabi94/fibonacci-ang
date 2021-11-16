@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     npm install
 
 
-## Para configurar el servidor del json seguir los siguientes pasos: 
+## Para configurar el server del json seguir los siguientes pasos: 
   
   ### Instalar:
      npm install json-server
