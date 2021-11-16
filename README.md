@@ -2,7 +2,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
 
-## Recordar instalar el node_modules desde el cmd luego de haber ingresando a la carpeta del proyecto
+## Recordar instalar el node_modules desde el cmd luego de haber ingresado a la carpeta del proyecto
     npm install
 
 
