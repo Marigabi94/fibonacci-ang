@@ -9,9 +9,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Para configurar el server del json seguir los siguientes pasos: 
   
   ### Instalar:
-     npm install json-server
+     npm install -g json-server
   ### Ingresar por cmd a la carpeta "assets" y ejecutar
-     json-server --watch fibonacci.json 
+     npx json-server --watch -p 3000 fibonacci.json
 
 
 ## Development server
