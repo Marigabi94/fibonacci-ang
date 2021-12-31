@@ -4,11 +4,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
+## Made with
 [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&labelColor=101010)]()
 [![Typescript](https://img.shields.io/badge/Typescritp-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)]()
 [![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)]()
 [![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)]()
 [![Material](https://img.shields.io/badge/Material-EE729B?style=for-the-badge&logo=materialdesign&logoColor=white&labelColor=101010)]() </br>
+[![VS](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&labelColor=101010)]()</br>
+
 ## Recordar instalar el node_modules desde el cmd luego de haber ingresado a la carpeta del proyecto
     npm install
 
